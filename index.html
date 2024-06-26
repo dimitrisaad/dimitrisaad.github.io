@@ -14,28 +14,68 @@
     body {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       align-items: center;
-      height: 100vh;
       margin: 0;
       font-family: Times, serif;
     }
-    .name {
+    .main-name {
       font-size: 48px;
-      font-weight: bold;
-      text-align: center;
+      text-align: left;
       font-family: 'Source Serif 4', serif;
-      margin-top: 50px; /* Adds some space at the top */
+      margin-top: 50px;
+      align-self: flex-start; /* Aligns the name to the left */
+      margin-left: 20px; /* Adds some space from the left edge */
+    }
+    .name {
+      font-size: 36px;
+      text-align: left;
+      font-family: 'Source Serif 4', serif;
+      margin-top: 50px;
+      align-self: flex-start; /* Aligns the name to the left */
     }
     .picture {
-      margin-top: 150px; /* Adjust this value to control the spacing between the name and the image */
+      margin-top: 50px;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 50px;
+      width: 80%;
+    }
+    .column {
+      flex: 1;
+      padding: 20px;
+    }
+    .left-column {
+      text-align: center;
+    }
+    .right-column {
+      font-family: 'Source Serif 4', serif;
+    }
+    .profile-image {
+      max-width: 50%;
+      height: auto;
+      border: 2px solid #000;
+    }
+    .description {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="name">John Silva</div>
+  <div class="main-name">Dimitri Saad</div>
   <div class="picture">
-    <img src="SILVA.jpeg" alt="John Silva's Image" style="max-width: 100%; height: auto;">
+    <img src="20181204_Warming_stripes.png" alt="Dimitri Saad's Image" style="max-width: 100%; height: auto;">
+  </div>
+  <div class="content">
+    <div class="column left-column">
+      <img src="230818-095300-5243.jpg" alt="Another Image of Dimitri Saad" class="profile-image">
+    </div>
+    <div class="column right-column">
+      <div class="name">Dimitri Saad</div>
+      <p class="description"> I am a PhD Candidate at Stanford University. I have the pleasure of working with Adam Brandt and Inês Azevedo on exciting research that focuses on the energy transition. My work has so far centered on energy storage: gas, electric, and heat storage.</p>
+    </div>
   </div>
 </body>
 </html>
